@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ティアラメンツサポートツール</title>
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>ティアラサポートツール</h1>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="checkbox-wrapper">
+          <img src="img/メイルゥ.png" alt="メイルゥ" />
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox1" class="checkbox-item" />
+            <span>(1)効果</span>
+          </div>
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox2" />
+            <span>墓地効果</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="checkbox-wrapper">
+          <img src="img/ハゥフニス.png" alt="ハゥフニス" />
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox3" class="checkbox-item" />
+            <span>(1)効果</span>
+          </div>
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox4" />
+            <span>墓地効果</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="checkbox-wrapper">
+          <img src="img/シェイレーン.png" alt="シェイレーン" />
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox5" class="checkbox-item" />
+            <span>(1)効果</span>
+          </div>
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox6" />
+            <span>墓地効果</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="checkbox-wrapper">
+          <img src="img/レイノハート.png" alt="レイノハート" />
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox7" class="checkbox-item" />
+            <span>(1)効果</span>
+          </div>
+          <div class="checkbox-label">
+            <input type="checkbox" id="checkbox8" />
+            <span>墓地効果</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    /* 基調となる水色 */
+    :root {
+      --main-color: #00bcd4;
+    }
+
+    /* 上部文字列用のクラス */
+    .page-header {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: var(--main-color);
+      text-align: center;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    /* 2x2のボックス用のクラス */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-item {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    /* チェックボックス用のクラス */
+    .checkbox-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .grid-item img {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  </style>
+</html>
