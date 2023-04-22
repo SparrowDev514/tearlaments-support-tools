@@ -19,7 +19,7 @@
             <span>(1)効果</span>
           </div>
           <div class="checkbox-label">
-            <input type="checkbox" id="checkbox2" />
+            <input type="checkbox" id="checkbox2" class="checkbox-item" />
             <span>墓地効果</span>
           </div>
         </div>
@@ -32,7 +32,7 @@
             <span>(1)効果</span>
           </div>
           <div class="checkbox-label">
-            <input type="checkbox" id="checkbox4" />
+            <input type="checkbox" id="checkbox4" class="checkbox-item" />
             <span>墓地効果</span>
           </div>
         </div>
@@ -45,7 +45,7 @@
             <span>(1)効果</span>
           </div>
           <div class="checkbox-label">
-            <input type="checkbox" id="checkbox6" />
+            <input type="checkbox" id="checkbox6" class="checkbox-item" />
             <span>墓地効果</span>
           </div>
         </div>
@@ -58,14 +58,24 @@
             <span>(1)効果</span>
           </div>
           <div class="checkbox-label">
-            <input type="checkbox" id="checkbox8" />
+            <input type="checkbox" id="checkbox8" class="checkbox-item" />
             <span>墓地効果</span>
           </div>
         </div>
       </div>
+      <button id="uncheck-all">リセット</button>
     </div>
   </body>
-
+  <script>
+    document
+      .getElementById("uncheck-all")
+      .addEventListener("click", function () {
+        const checkboxes = document.querySelectorAll(".checkbox-item");
+        for (const checkbox of checkboxes) {
+          checkbox.checked = false;
+        }
+      });
+  </script>
   <style>
     /* 基調となる水色 */
     :root {
@@ -110,6 +120,24 @@
     .grid-item img {
       max-width: 100%;
       margin-bottom: 1rem;
+    }
+    /* 一括選択解除ボタンのスタイル */
+    #uncheck-all {
+      background-color: #00bcd4;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #uncheck-all:hover {
+      background-color: #008ba3;
+      transform: scale(1.05);
     }
   </style>
 </html>
